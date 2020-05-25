@@ -7,7 +7,7 @@
       <button @click="$emit('edit-item', index)">修改</button>
     </th>
     <th>
-      <button @click="removeItem(index)">刪除</button>
+      <button @click="$emit('remove-item', index)">刪除</button>
     </th>
   </tr>
 </template>
@@ -18,15 +18,6 @@ export default {
   props: {
     crud: Object,
     index: Number
-  },
-  methods: {
-    removeItem(index) {
-      app.items.splice(index, 1);
-      if (app.target === index) {
-        app.initInput();
-        app.type = "create";
-      }
-    }
   }
 };
 </script>

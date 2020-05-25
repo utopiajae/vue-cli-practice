@@ -31,6 +31,7 @@
         <tr
           is="CrudItem"
           @edit-item="editItem"
+          @remove-item="removeItem"
           v-for="(item, index) in items"
           :crud="item"
           :index="index"
@@ -43,11 +44,11 @@
 
 
 <script>
-import CrudItem from '@/components/CrudItem.vue'
+import CrudItem from "@/components/CrudItem.vue";
 export default {
   name: "CRUD",
-  components:{
-      CrudItem
+  components: {
+    CrudItem
   },
   data() {
     return {
@@ -58,32 +59,32 @@ export default {
       sex: "男",
       items: [
         {
-          name: "jae",
+          name: "j",
           age: 10,
           sex: "男"
         },
         {
-          name: "ollie",
+          name: "o",
           age: 11,
           sex: "女"
         },
         {
-          name: "frank",
+          name: "f",
           age: 12,
           sex: "男"
         },
         {
-          name: "jimmy",
+          name: "j",
           age: 13,
           sex: "男"
         },
         {
-          name: "geng",
+          name: "g",
           age: 14,
           sex: "男"
         },
         {
-          name: "ivan",
+          name: "i",
           age: 15,
           sex: "男"
         }
@@ -129,6 +130,13 @@ export default {
       this.age = target.age;
       this.sex = target.sex;
       this.target = index;
+    },
+    removeItem(index) {
+      this.items.splice(index, 1);
+      if (this.target === index) {
+        this.initInput();
+        this.type = "create";
+      }
     }
   }
 };
