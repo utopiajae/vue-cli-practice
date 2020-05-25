@@ -3,7 +3,7 @@
     <div class="container">
       <p class="banner-title">Hello Vue</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis eligendi rem ad quasi aut, voluptas dolorum. Fugit quae nulla distinctio deserunt repudiandae officiis. Reprehenderit velit consequatur non possimus neque?</p>
-      <button class="more-button">Learn More</button>
+      <a class="more-button" href="/">Learn More</a>
     </div>
   </div>
 </template>
@@ -44,7 +44,20 @@ p {
 }
 
 .more-button {
-  width: 100px;
-  height: 40px;
+  width: 90px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: steelblue;
+  color: white;
+  text-decoration: none;
+  line-height: 20px;
+  text-align: center;
+}
+
+.more-button:hover {
+  background-color:skyblue;
+  transition: background-color .5s ease;
 }
 </style>

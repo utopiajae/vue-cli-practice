@@ -3,9 +3,9 @@
     <div class="container">
       <p class="project-name">Vue-Cli-Practice</p>
       <div class="input-item">
-        <p>搜尋</p>
         <input type="text" />
-        <button>click</button>
+        <input type="text" />
+        <a class="search-button">Search</a>
       </div>
     </div>
   </div>
@@ -48,19 +48,25 @@ export default {
   align-items: center;
 }
 
-p {
-  color: white;
-  font-size: 20px;
-}
-
 input {
   width: 200px;
   height: 30px;
-  margin: 0px 10px;
+  margin: 0px 5px;
 }
 
-button {
-  width: 50px;
-  height: 25px;
+.search-button {
+  width: 80px;
+  height: 35px;
+  background-color:teal;
+  display: inline-block;
+  border-radius: 5px;
+  color:white;
+  text-align: center;
+  line-height: 35px;
+}
+
+.search-button:hover {
+  background-color:turquoise;
+  transition: background-color .5s ease;
 }
 </style>
