@@ -60,6 +60,7 @@ input {
   background-color:teal;
   display: inline-block;
   border-radius: 5px;
+  text-decoration: none;
   color:white;
   text-align: center;
   line-height: 35px;

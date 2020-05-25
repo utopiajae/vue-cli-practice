@@ -4,7 +4,8 @@
     <Banner/>
     <div id="nav">
       <router-link to="/">Home</router-link>|
-      <router-link to="/crud">CRUD</router-link>
+      <router-link to="/crud">CRUD</router-link>|
+      <router-link to="/blog">Blog</router-link>
     </div>
     <router-view />
     <Footer/>

@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import CRUD from '../views/CRUD.vue'
+import Crud from '../views/CRUD.vue'
+import Blog from '../views/Blog.vue'
 
 Vue.use(VueRouter)
 
@@ -13,8 +14,13 @@ Vue.use(VueRouter)
   },
   {
     path: '/crud',
-    name: 'CRUD',
-    component: CRUD
+    name: 'Crud',
+    component: Crud
+  },
+  {
+    path: '/blog',
+    name: 'Blog',
+    component: Blog
   }
 ]
 
