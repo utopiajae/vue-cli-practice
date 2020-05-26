@@ -133,10 +133,8 @@ export default {
     },
     removeItem(index) {
       this.items.splice(index, 1);
-      if (this.target === index) {
-        this.initInput();
-        this.type = "create";
-      }
+      this.initInput();
+      this.type = "create";
     }
   }
 };
