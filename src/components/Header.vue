@@ -2,10 +2,9 @@
   <div class="header">
     <div class="container">
       <p class="project-name">Vue-Cli-Practice</p>
-      <div class="input-item">
-        <input type="text" />
-        <input type="text" />
-        <a class="search-button">Search</a>
+      <div class="input-container">
+        <a-input class="input-item"/>
+        <a-button type="primary">Search</a-button>
       </div>
     </div>
   </div>
@@ -35,39 +34,20 @@ export default {
   color: white;
   display: inline-block;
   position: absolute;
-  left: 0px;
-  top: 8px;
+  top: 3px;
 }
 
-.input-item {
+.input-container {
   position: absolute;
   right: 0px;
   top: 8px;
-  display: inline-block;
   display: flex;
   align-items: center;
 }
 
-input {
+.input-item {
   width: 200px;
   height: 30px;
   margin: 0px 5px;
-}
-
-.search-button {
-  width: 80px;
-  height: 35px;
-  background-color:teal;
-  display: inline-block;
-  border-radius: 5px;
-  text-decoration: none;
-  color:white;
-  text-align: center;
-  line-height: 35px;
-}
-
-.search-button:hover {
-  background-color:turquoise;
-  transition: background-color .5s ease;
 }
 </style>

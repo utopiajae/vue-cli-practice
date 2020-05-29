@@ -4,10 +4,14 @@
     <th>{{crud.age}}</th>
     <th>{{crud.sex}}</th>
     <th>
-      <button @click="$emit('edit-item', index)">修改</button>
+      <a-config-provider :auto-insert-space-in-button="false">
+        <a-button class="operation-button" @click="$emit('edit-item', index)">修改</a-button>
+      </a-config-provider>
     </th>
     <th>
-      <button @click="$emit('remove-item', index)">刪除</button>
+      <a-config-provider :auto-insert-space-in-button="false">
+        <a-button class="operation-button" @click="$emit('remove-item', index)">刪除</a-button>
+      </a-config-provider>
     </th>
   </tr>
 </template>
@@ -26,5 +30,10 @@ export default {
 th {
   font-size: 20px;
   color: black;
+  text-align: center;
+}
+
+.operation-button {
+  width: 60px;
 }
 </style>

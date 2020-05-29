@@ -2,12 +2,13 @@
   <div id="app">
     <Header/>
     <Banner/>
-    <div id="nav">
-      <router-link to="/">Home</router-link>|
-      <router-link to="/crud">CRUD</router-link>|
-      <router-link to="/blog">Blog</router-link>
-    </div>
-    <router-view />
+    <!-- <div id="nav">
+      <router-link to="/">Home </router-link>| 
+      <router-link to="/crud">Crud </router-link>| 
+      <router-link to="/blog">Blog </router-link>| 
+      <router-link to="/todo">Todo </router-link>
+    </div> -->
+    <router-view/>
     <Footer/>
   </div>
 </template>

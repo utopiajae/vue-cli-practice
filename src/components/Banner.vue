@@ -3,7 +3,10 @@
     <div class="container">
       <p class="banner-title">Hello Vue</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis eligendi rem ad quasi aut, voluptas dolorum. Fugit quae nulla distinctio deserunt repudiandae officiis. Reprehenderit velit consequatur non possimus neque?</p>
-      <a class="more-button" href="/">Learn More</a>
+      <!-- <a-button type="primary">Learn More</a-button> -->
+      <router-link class="ant-btn ant-btn-primary" to="/crud">crud</router-link>
+      <router-link class="switch-btn ant-btn ant-btn-primary" to="/blog">blog</router-link>
+      <router-link class="switch-btn ant-btn ant-btn-primary" to="/todo">todo</router-link>
     </div>
   </div>
 </template>
@@ -43,21 +46,7 @@ p {
   max-width: 1200px;
 }
 
-.more-button {
-  width: 90px;
-  height: 20px;
-  display: inline-block;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: steelblue;
-  color: white;
-  text-decoration: none;
-  line-height: 20px;
-  text-align: center;
-}
-
-.more-button:hover {
-  background-color:skyblue;
-  transition: background-color .5s ease;
+.switch-btn {
+  margin-left: 10px;
 }
 </style>

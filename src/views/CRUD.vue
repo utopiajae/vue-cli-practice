@@ -3,21 +3,21 @@
     <h5>Vue-CRUD</h5>
     <div class="input-container">
       <p>姓名:</p>
-      <input class="input-item" type="text" v-model="name" />
+      <a-input class="input-item" v-model="name" />
     </div>
     <div class="input-container">
       <p>年紀:</p>
-      <input class="input-item" type="text" v-model="age" />
+      <a-input class="input-item" v-model="age" />
     </div>
     <div class="input-container">
       <p>性別:</p>
-      <select id="sex-select" v-model="sex">
-        <option>男</option>
-        <option>女</option>
-      </select>
+      <a-select id="sex-select" v-model="sex">
+        <a-select-option value="男">男</a-select-option>
+        <a-select-option value="女">女</a-select-option>
+      </a-select>
     </div>
 
-    <button id="confirmBtn" @click="operation">{{type}}</button>
+    <a-button id="confirmBtn" @click="operation">{{type}}</a-button>
 
     <div id="crud-table">
       <table>
@@ -159,6 +159,11 @@ export default {
   margin-left: 20%;
 }
 
+p {
+  display: inline-block;
+  font-size: 20px;
+}
+
 .input-item,
 #sex-select {
   margin-left: 10px;
@@ -169,14 +174,6 @@ export default {
 #confirmBtn {
   margin-left: 20%;
   margin-bottom: 10px;
-  width: 20%;
-  height: 25px;
-  background-color: lightblue;
-}
-
-p {
-  display: inline-block;
-  font-size: 20px;
 }
 
 table {
@@ -187,15 +184,13 @@ table {
 #table-title {
   width: 100%;
   height: 40px;
-  background-color: lightblue;
+  background-color: gray;
 }
 
 th {
   font-size: 20px;
-  color: black;
-}
-button {
-  min-width: 20px;
+  color: white;
+  text-align: center;
 }
 
 h5 {

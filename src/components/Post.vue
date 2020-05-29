@@ -1,17 +1,20 @@
 <template>
   <div class="container">
-    <p class="post-title">Post</p>
+    <p class="post-title">{{item.title}}</p>
     <p
       class="post-content"
-    >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis eligendi rem ad quasi aut, voluptas dolorum. Fugit quae nulla distinctio deserunt repudiandae officiis. Reprehenderit velit consequatur non possimus neque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quis eligendi rem ad quasi aut, voluptas dolorum. Fugit quae nulla distinctio deserunt repudiandae officiis. Reprehenderit velit consequatur non possimus neque?</p>
-    <a class="more-button" href="/">Learn More</a>
+    >{{item.content}}</p>
+    <a-button type="primary">Learn More</a-button>
   </div>
 </template>
 
 
 <script>
 export default {
-  name: "Post"
+  name: "Post",
+  props: {
+    item: Object
+  }
 };
 </script>
 
@@ -39,20 +42,5 @@ export default {
   color: white;
   font-size: 15px;
   margin-bottom: 20px;
-}
-
-.more-button {
-  font-size: 15px;
-  padding: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  background-color: white;
-  color: black;
-  display: inline-block;
-}
-
-.more-button:hover {
-  background-color: cornsilk;
-  transition: background-color 0.5s ease;
 }
 </style>
