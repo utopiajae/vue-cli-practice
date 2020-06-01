@@ -1,9 +1,7 @@
 <template>
   <div class="container">
     <p class="post-title">{{item.title}}</p>
-    <p
-      class="post-content"
-    >{{item.content}}</p>
+    <p class="post-content">{{item.content}}</p>
     <a-button type="primary">Learn More</a-button>
   </div>
 </template>
@@ -24,10 +22,8 @@ export default {
   width: 380px;
   padding: 10px;
   margin: auto;
-  box-sizing: border-box;
   border-radius: 5px;
-  font-size: 0;
-  background: slategray;
+  background: gray;
 }
 
 .post-title {

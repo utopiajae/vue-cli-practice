@@ -3,8 +3,9 @@
     <div class="container">
       <p class="project-name">Vue-Cli-Practice</p>
       <div class="input-container">
-        <a-input class="input-item"/>
-        <a-button type="primary">Search</a-button>
+        <a-input class="input-item" placeholder="E-Mail" v-model="email"/>
+        <a-input class="input-item" placeholder="Password" v-model="password"/>
+        <a-button type="primary">Sign in</a-button>
       </div>
     </div>
   </div>
@@ -12,13 +13,21 @@
 
 <script>
 export default {
-  name: "Header"
+  name: "Header",
+  computed: {
+    email() {
+      return this.$store.state.email;
+    },
+    password() {
+      return this.$store.state.password;
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
 .header {
-  background-color:dimgray;
+  background-color:black;
 }
 
 .container {
@@ -39,15 +48,16 @@ export default {
 
 .input-container {
   position: absolute;
+  width: 500px;
   right: 0px;
-  top: 8px;
+  top: 10px;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .input-item {
   width: 200px;
   height: 30px;
-  margin: 0px 5px;
 }
 </style>

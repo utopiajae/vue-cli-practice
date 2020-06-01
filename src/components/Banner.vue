@@ -19,7 +19,7 @@ export default {
 
 <style scoped lang="scss">
 .banner {
-  background-color: lightslategrey;
+  background-color:gray;
 }
 
 .container {
