@@ -7,6 +7,7 @@
       <router-link class="ant-btn ant-btn-primary" to="/crud">crud</router-link>
       <router-link class="switch-btn ant-btn ant-btn-primary" to="/blog">blog</router-link>
       <router-link class="switch-btn ant-btn ant-btn-primary" to="/todo">todo</router-link>
+      <router-link class="switch-btn ant-btn ant-btn-primary" to="/login">login</router-link>
     </div>
   </div>
 </template>

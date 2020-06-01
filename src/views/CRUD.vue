@@ -91,14 +91,6 @@ export default {
       ]
     };
   },
-  watch: {
-    name() {
-      this.$store.dispatch('setEmail', this.name);
-    },
-    age() {
-      this.$store.dispatch('setPassWord', this.age);
-    }
-  },
   methods: {
     initInput() {
       this.name = "";

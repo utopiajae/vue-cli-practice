@@ -12,14 +12,25 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 export default {
   name: "Header",
   computed: {
-    email() {
-      return this.$store.state.email;
+    email: {
+      get() {
+        return this.$store.state.email;
+      },
+      set(param) {
+        this.$store.dispatch('setEmail', param);
+      }
     },
-    password() {
-      return this.$store.state.password;
+    password: {
+      get() {
+        return this.$store.state.password;
+      },
+      set(param) {
+        this.$store.dispatch("setPassWord", param);
+      }
     }
   }
 };
