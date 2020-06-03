@@ -3,27 +3,15 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+const modulesFiles = require.context('./modules', true, /\.js$/)
+
+const modules = modulesFiles.keys().reduce((modules, modulePath) => {
+  const moduleName = modulePath.replace(/^\.\/(.*)\.\w+$/, '$1')
+  const value = modulesFiles(modulePath)
+  modules[moduleName] = value.default
+  return modules
+}, {})
+
 export default new Vuex.Store({
-  state: {
-    email: '',
-    password: ''
-  },
-  mutations: {
-    SET_EMAIL(state, param) {
-      state.email = param || '';
-    },
-    SET_PASSWORD(state, param) {
-      state.password = param || '';
-    }
-  },
-  actions: {
-    setEmail({commit}, param) {
-      commit('SET_EMAIL', param);
-    },
-    setPassWord({commit}, param) {
-      commit('SET_PASSWORD', param);
-    }
-  },
-  modules: {
-  }
+  modules
 })

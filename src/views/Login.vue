@@ -13,18 +13,18 @@ export default {
   computed: {
     email: {
       get() {
-        return this.$store.state.email;
+        return this.$store.state.email.email;
       },
       set(param) {
-        this.$store.dispatch("setEmail", param);
+        this.$store.dispatch("email/setEmail", param);
       }
     },
     password: {
       get() {
-        return this.$store.state.password;
+        return this.$store.state.password.password;
       },
       set(param) {
-        this.$store.dispatch("setPassWord", param);
+        this.$store.dispatch("password/setPassWord", param);
       }
     }
   }
